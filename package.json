@@ -1,0 +1,32 @@
+{
+  "name": "managed-timers",
+  "version": "1.0.0",
+  "engines": {
+    "node": "~8.4.0"
+  },
+  "description": "managed-timers is a small wrapper to manage NodeJS.setImmediate/setInterval/setTimeout and their clear functions.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf factory lib",
+    "prepare": "npm run build && mkdir lib && cp factory/* lib && rm -rf factory",
+    "release": "standard-version",
+    "test": "echo A test is yet to be introduced."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvis/managed-timers.git"
+  },
+  "keywords": ["jest", "leakage", "timer"],
+  "author": "Alvis HT Tang <alvis@hilbert.space>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alvis/managed-timers/issues"
+  },
+  "homepage": "https://github.com/alvis/managed-timers#readme",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
