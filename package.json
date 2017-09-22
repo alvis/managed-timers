@@ -26,7 +26,11 @@
   },
   "homepage": "https://github.com/alvis/managed-timers#readme",
   "devDependencies": {
+    "@types/node": "^8.0.20",
+    "standard-version": "^4.2.0",
+    "typescript": "^2.4.2"
   },
   "dependencies": {
+    "bind-decorator": "^1.0.11"
   }
 }
