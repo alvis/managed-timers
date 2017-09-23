@@ -10,9 +10,19 @@
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rm -rf factory lib",
-    "prepare": "npm run build && mkdir lib && cp factory/* lib && rm -rf factory",
+    "prepare": "npm run build && mkdir lib && cp factory/source/* lib && rm -rf factory",
     "release": "standard-version",
-    "test": "echo A test is yet to be introduced."
+    "test": "jest"
+  },
+  "jest": {
+    "bail": true,
+    "resetModules": true,
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testEnvironment": "node",
+    "testMatch": ["**/*.spec.ts?(x)"],
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"]
   },
   "repository": {
     "type": "git",
@@ -26,8 +36,11 @@
   },
   "homepage": "https://github.com/alvis/managed-timers#readme",
   "devDependencies": {
+    "@types/jest": "^20.0.7",
     "@types/node": "^8.0.20",
+    "jest": "^20.0.4",
     "standard-version": "^4.2.0",
+    "ts-jest": "^20.0.10",
     "typescript": "^2.4.2"
   },
   "dependencies": {
